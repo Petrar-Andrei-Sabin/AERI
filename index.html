@@ -528,59 +528,68 @@
       text-align: center;
     }
 
-* {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    .flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      /* permite cardurilor să se așeze pe linie nouă pe ecrane mici */
+      gap: 20px;
+      /* spațiu între carduri */
+      padding: 20px;
+      width: 100%;
+    }
 
-.flexbox {
-display: flex;
-flex-wrap: wrap; /* permite cardurilor să treacă pe linie nouă pe ecrane mici */
-gap: 20px; /* spațiu între carduri */
-padding: 20px;
-width: 100%;
-}
+    .divdespre {
+      border-radius: 20px;
+      border: 3px solid transparent;
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 calc(50% - 20px);
+      /* două carduri pe rând, spațiu pentru gap */
+      min-width: 250px;
+      /* pentru mobil */
+    }
 
+    /* Card imagine */
+    .divdespre.despreimg {
+      padding: 0;
+      /* fără padding pentru ca imaginea să atingă bordura */
+      background: linear-gradient(90deg, #a2112a, #ff7700, #ffdd00, #00aa00, #0055ff, #5e005e) border-box;
+    }
 
-.divdespre {
-border: 3px solid transparent;
-border-radius: 20px;
-background:
-linear-gradient(#ffffff, #ffffff) padding-box,
-linear-gradient(90deg, #a2112a, #ff7700, #ffdd00, #00aa00, #0055ff, #5e005e) border-box;
-flex: 1 1 300px; /* se ajustează proporțional, minim 300px */
-min-width: 250px;
-max-width: 100%;
-display: flex;
-flex-direction: column;
-}
+    .divdespre.despreimg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* imaginea ocupă tot div-ul */
+      display: block;
+      border-radius: inherit;
+      /* colțurile imaginii coincid cu bordura */
+    }
 
+    /* Card text */
+    .divdespre.despretext {
+      padding: 20px;
+      /* doar cardul text are padding */
+      color: black;
+      background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        linear-gradient(90deg, #a2112a, #ff7700, #ffdd00, #00aa00, #0055ff, #5e005e) border-box;
+    }
 
-.despreimg img {
-width: 100%;
-border-radius: 17px;
-display: block;
-}
+    .despretext h3 {
+      margin-bottom: 12px;
+    }
 
-
-.despretext {
-color: black;
-padding: 20px;
-}
-
-
-.despretext h3 {
-margin-bottom: 12px;
-}
-
-
-.despretext p {
-line-height: 1.5;
-}
-
-</style>
+    .despretext p {
+      line-height: 1.5;
+    }
+  </style>
   </style>
 </head>
 
@@ -665,21 +674,23 @@ line-height: 1.5;
   </header>
   <h2 class="h2pt" id="despre">Despre noi</h2>
 
-<div class="flexbox">
+  <div class="flexbox">
 
-  <div class="divdespre despreimg">
-    <img src="green.jpeg" alt="Imagine exemplu" />
+    <div class="divdespre despreimg">
+      <img src="friendship.jpg" alt="Imagine exemplu" />
+    </div>
+
+    <div class="divdespre despretext">
+      <h3>AERI</h3>
+      <p>
+        AERI este o organizație non-guvernamentală dedicată promovării și protejării
+        drepturilor persoanelor LGBT+. Prin campanii de conștientizare, programe educaționale și sprijin juridic, ONG-ul
+        luptă împotriva discriminării și promovează incluziunea socială, oferind un mediu sigur și respectuos pentru
+        comunitatea LGBT+.
+      </p>
+    </div>
+
   </div>
-
-  <div class="divdespre despretext">
-    <h3>Titlu Card</h3>
-    <p>
-      Acesta este un paragraf de exemplu. Aici poți adăuga orice text dorești.
-      Cardul are fundal alb, text negru, margini rotunjite și o bordură cu gradient.
-    </p>
-  </div>
-
-</div>
 
   <h2 class="h2pt" id="membri">Membri</h2>
 
