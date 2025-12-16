@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Petrar Andrei-Sabin">
+  <meta name="keywords" content="LGBT+, comunitate, diversitate, ONG">
+  <meta name="description" content="Pagina unui ONG">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Asociația Egalitate Respect Incluziune</title>
+  <style>
+    @font-face {
+      font-family: 'MyGeos';
+      src: url('geos.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font-family: MyGeos, sans-serif;
+      font-size: x-large;
+      background: black;
+      margin: 0px;
+    }
+
+    .h2pt {
+      background: white;
+      border: 10px solid transparent;
+      border-image: linear-gradient(90deg, #a2112a, #ff7700, #ffdd00, #00aa00, #0055ff, #5e005e) 1;
+      color: black;
+      padding: 10px;
+      margin: 0px;
+      width: 100vw;
+    }
+
+    .navcolor {
+      background-image: linear-gradient(90deg, #a2112a, #ff7700, #ffdd00, #00aa00, #0055ff, #5e005e);
+    }
+
+    .font1 {
+      font-size: 15px;
+      color: white;
+      background: black;
+      border: 2.25px solid white;
+      border-radius: 20px;
+      padding: 0px 10px;
+      text-decoration: none;
+    }
+
+    .containerp {
+      padding: 0px 10px;
+    }
+
+    .buttoncustom {
+      background: black;
+      border: 2.25px solid white;
+      border-radius: 10px;
+      color: white;
+      font-size: 15px;
+      padding: 10px;
+      cursor: pointer;
+      transition: box-shadow 150ms ease, transform 120ms ease;
+      outline: none;
+    }
+
+    .buttoncustom:focus,
+    .buttoncustom:active,
+    .buttoncustom:focus-visible {
+      outline: none;
+      border: 2.25px solid white;
+      box-shadow: none;
+    }
+
+    .buttoncustom:hover,
+    .buttoncustom:focus-visible {
+      box-shadow: 0 0 15px white;
+      box-shadow: 0 0 15px white;
+    }
+
+    .buttoncustom:active {
+      box-shadow: 0 0 15px white;
+      box-shadow: 0 0 15px white;
+    }
+
+    .imgdimension {
+      width: 2.25em;
+      margin: 0px 2.25px 0px 0px;
+    }
+
+    .menu {
+      padding: 0px;
+    }
+
+    .divsize {
+      font-size: 25px;
+    }
+
+    .navbar .nav-link {
+      color: black;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link:focus,
+    .navbar .nav-link:active,
+    .navbar .nav-link.active,
+    .navbar .nav-link:visited {
+      color: black;
+      background-color: transparent;
+      outline: none;
+      box-shadow: none;
+    }
+
+    .navbar .nav-link:focus {
+      text-decoration: none;
+    }
+
+    .navbar-nav .nav-link span {
+      display: inline-block;
+      transition: color .20s ease, text-shadow .20s ease;
+      color: inherit;
+    }
+
+    .navbar-nav .nav-link:hover span,
+    .navbar-nav .nav-link:focus span,
+    .navbar-nav .nav-link:focus-visible span {
+      color: white;
+      text-shadow: 0 0 20px white;
+      filter: drop-shadow(0 0 20px white) drop-shadow(0 0 20px white);
+    }
+
+    .navbar-nav .nav-link {
+      background: transparent;
+      outline: none;
+    }
+
+    .carousel-item {
+      height: 80vh;
+    }
+
+    .carousel-img {
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      opacity: 100%;
+      width: 40px;
+      height: 5px;
+      border-radius: 0;
+      margin: 0 5px;
+      background-color: black;
+    }
+
+    .carousel-indicators [data-bs-target] {
+      position: relative;
+      background: transparent;
+      width: 40px;
+      height: 5px;
+      margin: 0 5px;
+      border: none;
+    }
+
+    .carousel-indicators [data-bs-target]::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 100%;
+      border-radius: 5px;
+    }
+
+    .carousel-indicators [data-bs-slide-to="0"].active::before {
+      background-color: #a2112a;
+      box-shadow: 0 0 20px white;
+      box-shadow: 0 0 20px white;
+    }
+
+    .carousel-indicators [data-bs-slide-to="1"].active::before {
+      background-color: #ff7700;
+      box-shadow: 0 0 20px white;
+      box-shadow: 0 0 20px white;
+    }
+
+    .carousel-indicators [data-bs-slide-to="2"].active::before {
+      background-color: #ffdd00;
+      box-shadow: 0 0 20px white;
+      box-shadow: 0 0 20px white;
+    }
+
+    .carousel-indicators [data-bs-slide-to="3"].active::before {
+      background-color: #00aa00;
+      box-shadow: 0 0 20px white;
+      box-shadow: 0 0 20px white;
+    }
+
+    .carousel-indicators [data-bs-slide-to="4"].active::before {
+      background-color: #0055ff;
+      box-shadow: 0 0 20px white;
+      box-shadow: 0 0 20px white;
+    }
+
+    .carousel-indicators [data-bs-slide-to="5"].active::before {
+      background-color: #5e005e;
+      box-shadow: 0 0 20px white;
+      box-shadow: 0 0 20px white;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-image: none;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel-control-prev-icon::before,
+    .carousel-control-next-icon::before {
+      content: none;
+    }
+
+    .arrow-svg {
+      width: 45px;
+      height: 45px;
+      stroke: #000;
+      stroke-width: 2.25;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      transition: stroke .5s ease, filter .5s ease;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next,
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon::before,
+    .carousel-control-next-icon::before {
+      opacity: 100%
+    }
+
+    .carousel-control-prev:hover .arrow-svg,
+    .carousel-control-prev:active .arrow-svg,
+    .carousel-control-next:hover .arrow-svg,
+    .carousel-control-next:active .arrow-svg {
+      stroke: white;
+      filter: drop-shadow(0 0 20px white) drop-shadow(0 0 20px white) drop-shadow(0 0 20px white)
+    }
+
+    .font1:hover,
+    .font1:focus,
+    .font1:active {
+      box-shadow: 0 0 15px white;
+      outline: none;
+    }
+
+
+    @media (max-width: 1200px) {
+      .divflex {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .div-in {
+        width: 45%;
+
+        margin: 10px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .div-in {
+        width: 90%;
+
+      }
+
+      .carousel-caption h2 {
+        font-size: 1.5rem;
+      }
+
+      .carousel-caption p {
+        font-size: 1rem;
+      }
+
+      .font1 {
+        font-size: 1rem;
+
+      }
+    }
+
+    @media (max-width: 576px) {
+      .carousel-item {
+        height: 50vh;
+
+      }
+
+      .arrow-svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      .buttoncustom {
+        font-size: 0.85rem;
+        padding: 8px;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    .h2pt {
+      width: 100%;
+
+    }
+
+    .carousel-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .accordion-item.acc-red>.accordion-header>.accordion-button {
+      background-color: #a2112a;
+      color: black;
+    }
+
+    .accordion-item.acc-orange>.accordion-header>.accordion-button {
+      background-color: #ff7700;
+      color: black;
+    }
+
+    .accordion-item.acc-yellow>.accordion-header>.accordion-button {
+      background-color: #ffdd00;
+      color: black;
+    }
+
+    .accordion-item.acc-green>.accordion-header>.accordion-button {
+      background-color: #00aa00;
+      color: black;
+    }
+
+    .accordion-item.acc-blue>.accordion-header>.accordion-button {
+      background-color: #0055ff;
+      color: black;
+    }
+
+    .accordion-item.acc-purple>.accordion-header>.accordion-button {
+      background-color: #5e005e;
+      color: black;
+    }
+
+    .accordion-item.acc-red .accordion-body,
+    .accordion-item.acc-orange .accordion-body,
+    .accordion-item.acc-yellow .accordion-body,
+    .accordion-item.acc-green .accordion-body,
+    .accordion-item.acc-blue .accordion-body,
+    .accordion-item.acc-purple .accordion-body {
+      color: black;
+      background: transparent;
+
+    }
+
+
+    .custom-accordion .accordion-button {
+      background: black;
+      color: rgb(255, 255, 255);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+
+    .custom-accordion .accordion-body {
+      background: transparent;
+
+    }
+
+
+    .custom-accordion .accordion-item {
+      border: 2px solid black;
+    }
+
+
+    .custom-accordion .accordion-item {
+      background: black;
+      border: 2px solid rgb(0, 0, 0);
+    }
+
+
+    .custom-accordion .accordion-button::after {
+      display: none;
+    }
+
+
+    .accordion-arrow {
+      width: 30px;
+      height: 30px;
+      stroke: #000;
+      stroke-width: 2.25;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      transition:
+        transform 0.35s ease,
+        stroke 0.35s ease,
+        filter 0.35s ease;
+    }
+
+
+    .custom-accordion .accordion-button:not(.collapsed) .accordion-arrow {
+      transform: rotate(90deg);
+    }
+
+
+    .custom-accordion .accordion-button:hover .accordion-arrow,
+    .custom-accordion .accordion-button:focus-visible .accordion-arrow {
+      stroke: white;
+      filter:
+        drop-shadow(0 0 20px white) drop-shadow(0 0 20px white);
+    }
+
+
+    .custom-accordion .accordion-body {
+      background: black;
+      color: white;
+      border-top: 1px solid white;
+    }
+
+    .custom-accordion .accordion-button:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    .custom-accordion .accordion-button:hover span,
+    .custom-accordion .accordion-button:focus-visible span {
+      color: white;
+      text-shadow: 0 0 20px white;
+      filter: drop-shadow(0 0 20px white);
+    }
+
+    .foracc {
+      color: white;
+      padding-left: 20px;
+    }
+
+    .margin20A {
+      margin: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-radius: 12px;
+      border: 4px solid black;
+      outline: 4px solid currentColor;
+    }
+
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      border: 4px solid black;
+      outline: 4px solid currentColor;
+    }
+
+
+    .red {
+      color: #a2112a;
+    }
+
+    .orange {
+      color: #ff7700;
+    }
+
+    .yellow {
+      color: #ffdd00;
+    }
+
+    .green {
+      color: #00aa00;
+    }
+
+    .blue {
+      color: #0055ff;
+    }
+
+    .violet {
+      color: #5e005e;
+    }
+
+    .cards-container .card h3,
+    .cards-container .card h4,
+    .cards-container .card p {
+      color: #000;
+    }
+
+    .cards-container .card {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navcolor sticky-top">
+    <div class="container-fluid containerp"> <a class="font1" href="index.html"><img class="imgdimension"
+          src="couple.png" alt="Logo-ul sitelui nostru">AERI</a> <button class="navbar-toggler buttoncustom"
+        type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+        aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar menu">Menu</span> </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav"> <a class="nav-link divsize" href="#despre"><span>Despre noi</span></a> <a
+            class="nav-link divsize" href="#membri"><span>Membri</span></a> <a class="nav-link divsize"
+            href="#proiecte"><span>Proiecte</span></a> <a class="nav-link divsize"
+            href="#contact"><span>Contact</span></a> </div>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+      <div class="carousel-indicators"> <button type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> <button type="button"
+          data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button> <button
+          type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button> <button type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="4" aria-label="Slide 5"></button> <button type="button"
+          data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active"> <img src="red.jpeg" class="d-block w-100 carousel-img"
+            alt="O inimă din mâini pictată în roșu">
+          <div class="carousel-caption">
+            <h2>Noi suntem Roși</h2>
+            <p>Departamentul Sănătate și Bunăstare Fizică</p>
+          </div>
+        </div>
+        <div class="carousel-item"> <img src="orange.jpeg" class="d-block w-100 carousel-img"
+            alt="O inimă din mâini pictată în portocaliu">
+          <div class="carousel-caption">
+            <h2>Noi suntem Portocali</h2>
+            <p>Departamentul Suport și Consiliere</p>
+          </div>
+        </div>
+        <div class="carousel-item"> <img src="yellow.jpeg" class="d-block w-100 carousel-img"
+            alt="O inimă din mâini pictată în galben">
+          <div class="carousel-caption">
+            <h2>Noi suntem Galbeni</h2>
+            <p>Departamentul Educație și Vizibilitate</p>
+          </div>
+        </div>
+        <div class="carousel-item"> <img src="green.jpeg" class="d-block w-100 carousel-img"
+            alt="O inimă din mâini pictată în verde">
+          <div class="carousel-caption">
+            <h2>Noi suntem Verzi</h2>
+            <p>Departamentul Comunitate și Mediu</p>
+          </div>
+        </div>
+        <div class="carousel-item"> <img src="blue.jpeg" class="d-block w-100 carousel-img"
+            alt="O inimă din mâini pictată în albastru">
+          <div class="carousel-caption">
+            <h2>Noi suntem Albaștri</h2>
+            <p>Departamentul Advocacy și Politici Publice</p>
+          </div>
+        </div>
+        <div class="carousel-item"> <img src="purple.jpeg" class="d-block w-100 carousel-img"
+            alt="O inimă din mâini pictată în violet">
+          <div class="carousel-caption">
+            <h2>Noi suntem Violeți</h2>
+            <p>Departamentul Cultură și Spiritualitate</p>
+          </div>
+        </div>
+      </div> <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"> <svg viewBox="0 0 24 24"
+            class="arrow-svg">
+            <path d="M15 6 L9 12 L15 18" />
+          </svg> </span> <span class="visually-hidden">previous</span> </button> <button class="carousel-control-next"
+        type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"> <span
+          class="carousel-control-next-icon" aria-hidden="true"> <svg viewBox="0 0 24 24" class="arrow-svg">
+            <path d="M9 6 L15 12 L9 18" />
+          </svg> </span> <span class="visually-hidden">next</span> </button>
+    </div>
+  </header>
+  <h2 class="h2pt" id="despre">Despre noi</h2>
+  <h2 class="h2pt" id="membri">Membri</h2>
+
+  <div class="cards-container">
+    <div class="card red">
+      <h3>Negreanu Bianca</h3>
+      <h4>Departamentul Roșu - Sănătate și Bunăstare Fizică</h4>
+      <p>Reprezintă energia și grija pentru sănătatea comunității.</p>
+      <img src="Negreanu_Bianca.jpeg" alt="Imagine 1">
+      <p>Bianca este o persoană energică și dedicată, cu experiență în sănătate publică și programe de wellbeing. Crede
+        că accesul la servicii medicale prietenoase LGBT+ este un drept fundamental. Este recunoscută pentru
+        inițiativele sale de prevenție și pentru modul în care inspiră comunitatea să își trăiască viața cu vitalitate
+        și curaj.</p>
+    </div>
+
+    <div class="card orange">
+      <h3>Mitre Diana</h3>
+      <h4>Departamentul Portocaliu - Suport și Consiliere</h4>
+      <p>Oferă sprijin și vindecare pentru cei afectați de discriminare.</p>
+      <img src="Mitre_Diana.jpeg" alt="Imagine 2">
+      <p>Diana are o formare în psihologie și drept, fiind un pilon de sprijin pentru cei care trec prin momente
+        dificile. Este empatică, calmă și orientată spre soluții. Coordonează grupuri de suport și oferă consiliere
+        juridică, ajutând victimele discriminării să își recapete încrederea și să își găsească vocea.</p>
+    </div>
+
+    <div class="card yellow">
+      <h3>Balastier Damian</h3>
+      <h4>Departamentul Galben - Educație și Vizibilitate</h4>
+      <p>Promovează vizibilitatea și educația, aducând lumină și speranță.</p>
+      <img src="Balastier_Damian.jpeg" alt="Imagine 3">
+      <p>Damian este un comunicator pasionat, cu abilități pedagogice și o viziune clară asupra importanței educației
+        incluzive. Organizează campanii de vizibilitate și traininguri pentru profesori și angajatori. Crede că lumina
+        cunoașterii poate schimba mentalități și aduce speranță pentru o societate mai deschisă.</p>
+    </div>
+
+    <div class="card green">
+      <h3>Dragomir Monica</h3>
+      <h4>Departamentul Verde - Comunitate și Mediu</h4>
+      <p>Creează spații sigure și sustenabile, conectând comunitatea cu natura.</p>
+      <img src="Dragomir_Monica.jpeg" alt="Imagine 4">
+      <p>Monica este o persoană pragmatică și creativă, cu o pasiune pentru sustenabilitate și spații sigure.
+        Coordonează proiecte comunitare, evenimente outdoor și inițiative ecologice. Este convinsă că legătura cu natura
+        și solidaritatea comunității pot crea un mediu sănătos și armonios pentru toți.</p>
+    </div>
+
+    <div class="card blue">
+      <h3>Berar Noelia</h3>
+      <h4>Departamentul Albastru - Advocacy și Politici Publice</h4>
+      <p>Luptă pentru armonie socială și schimbări legislative.</p>
+      <img src="Berar_Noelia.jpeg" alt="Imagine 5">
+      <p>Noelia este o strategă și o negociatoare abilă, cu experiență în relații instituționale. Luptă pentru schimbări
+        legislative și pentru armonizarea politicilor publice cu nevoile comunității LGBT+. Este recunoscută pentru
+        perseverența ei și pentru abilitatea de a construi punți între ONG-uri și autorități.</p>
+    </div>
+
+    <div class="card violet">
+      <h3>Durian Bogdan</h3>
+      <h4>Departamentul Violet - Cultură și Spiritualitate</h4>
+      <p>Întărește spiritul comunității prin artă și tradiții.</p>
+      <img src="Durian_Bogdan.jpeg" alt="Imagine 6">
+      <p>Bogdan este un vizionar cultural, pasionat de artă și tradiții. Coordonează festivaluri queer, expoziții și
+        ateliere de storytelling. Crede că spiritul comunității se exprimă cel mai puternic prin cultură și
+        creativitate. Este un lider care inspiră prin autenticitate și prin dorința de a celebra diversitatea.</p>
+    </div>
+  </div>
+
+  <h2 class="h2pt" id="proiecte">Proiecte</h2>
+
+  <div class="accordion custom-accordion margin20A" id="accordionExample">
+
+    <div class="accordion-item acc-red">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseOne">
+          <span>Clinicile LGBT+ Friendly</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24">
+            <path d="M9 6 L15 12 L9 18" />
+          </svg>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="foracc">
+          <p>Proiectul își propune să dezvolte o rețea de clinici și cabinete medicale care să ofere servicii
+            prietenoase și accesibile pentru comunitatea LGBT+. În cadrul acestui program, medicii și personalul medical
+            vor fi instruiți să abordeze pacienții cu empatie și respect, eliminând prejudecățile și barierele care
+            există adesea în sistemul tradițional. Clinicile vor organiza campanii de prevenție, ateliere de nutriție și
+            sănătate mentală, dar și sesiuni de fitness comunitar. Atmosfera va fi una caldă și incluzivă, astfel încât
+            fiecare persoană să simtă că are un loc sigur unde poate primi îngrijire.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item acc-orange">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo">
+          <span>Vocea Ta Contează</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24">
+            <path d="M9 6 L15 12 L9 18" />
+          </svg>
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="foracc">
+          <p>Acest proiect creează un spațiu de sprijin pentru persoanele care au trecut prin experiențe de discriminare
+            sau abuz. Se vor organiza grupuri de suport conduse de psihologi și consilieri juridici, unde participanții
+            pot împărtăși povești, pot primi sfaturi și pot găsi soluții concrete pentru problemele lor. În paralel,
+            proiectul va oferi sesiuni individuale de consiliere, dar și workshopuri despre drepturile omului și tehnici
+            de recăpătare a încrederii. „Vocea Ta Contează” nu este doar un program de sprijin, ci o comunitate care îți
+            amintește că nu ești singur și că vocea ta are puterea de a schimba lucruri.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item acc-yellow">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseThree">
+          <span>Școlile Incluzive</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24">
+            <path d="M9 6 L15 12 L9 18" />
+          </svg>
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="foracc">
+          <p>Proiectul „Școlile Incluzive” se concentrează pe educația ca instrument de schimbare socială. Profesorii și
+            elevii vor primi materiale didactice adaptate, care promovează diversitatea și respectul. Se vor organiza
+            traininguri pentru cadrele didactice, astfel încât acestea să știe cum să abordeze subiecte sensibile și să
+            creeze un mediu sigur pentru toți elevii. În plus, proiectul va include campanii de vizibilitate în
+            comunitate, expoziții de artă realizate de elevi și sesiuni de storytelling. Scopul este ca fiecare copil să
+            învețe într-un mediu unde diferențele sunt celebrate, nu ascunse.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item acc-green">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseFour">
+          <span>Spații Verzi pentru Toți</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24">
+            <path d="M9 6 L15 12 L9 18" />
+          </svg>
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="foracc">
+          <p>Acest proiect își propune să transforme spațiile urbane în locuri prietenoase și sigure pentru comunitate.
+            Vor fi amenajate grădini comunitare, zone de picnic și spații pentru evenimente culturale în aer liber.
+            Membrii comunității vor fi implicați direct în procesul de design și întreținere, pentru a crea un sentiment
+            de apartenență. În plus, proiectul va promova activități ecologice precum reciclarea, plantarea de arbori și
+            ateliere de educație pentru mediu. „Spații Verzi pentru Toți” nu este doar despre natură, ci despre
+            solidaritate și despre a construi împreună un mediu sănătos și armonios.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item acc-blue">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseFive">
+          <span>Legislație pentru Egalitate</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24">
+            <path d="M9 6 L15 12 L9 18" />
+          </svg>
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="foracc">
+          <p>Proiectul urmărește să aducă schimbări legislative reale prin dialog constant cu autoritățile și prin
+            campanii publice. Echipa va organiza mese rotunde cu ONG-uri, avocați și parlamentari, pentru a identifica
+            lacunele din legislația actuală și pentru a propune soluții concrete. În paralel, vor fi lansate campanii de
+            conștientizare în mass-media și pe rețelele sociale, pentru a mobiliza sprijinul public. „Legislație pentru
+            Egalitate” nu se limitează la advocacy, ci creează punți între comunitate și instituții, astfel încât vocea
+            celor marginalizați să fie auzită și respectată.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item acc-purple">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseSix">
+          <span>Festivalul Diversității</span>
+          <svg class="accordion-arrow" viewBox="0 0 24 24">
+            <path d="M9 6 L15 12 L9 18" />
+          </svg>
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="foracc">
+          <p>„Festivalul Diversității” va fi un eveniment anual care aduce împreună artă, muzică, tradiții și
+            spiritualitate. Vor fi organizate concerte, expoziții de artă queer, ateliere de storytelling și sesiuni de
+            meditație comunitară. Festivalul va fi un spațiu unde identitatea fiecăruia este celebrată, iar diversitatea
+            devine sursă de inspirație. Atmosfera va fi una vibrantă, plină de culoare și autenticitate, unde oamenii
+            pot să se exprime liber și să se conecteze la rădăcinile culturale ale comunității. Scopul este de a întări
+            spiritul comunitar și de a arăta că arta și tradițiile pot fi punți între oameni.</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <footer>
+    <h2 class="h2pt" id="contact">Contact</h2>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
