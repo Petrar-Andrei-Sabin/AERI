@@ -553,9 +553,7 @@
     .flexbox {
       display: flex;
       flex-wrap: wrap;
-      /* permite cardurilor să se așeze pe linie nouă pe ecrane mici */
       gap: 20px;
-      /* spațiu între carduri */
       padding: 20px;
       width: 100%;
     }
@@ -566,15 +564,12 @@
       display: flex;
       flex-direction: column;
       flex: 1 1 calc(50% - 20px);
-      /* două carduri pe rând, spațiu pentru gap */
       min-width: 250px;
-      /* pentru mobil */
     }
 
-    /* Card imagine */
+ 
     .divdespre.despreimg {
       padding: 0;
-      /* fără padding pentru ca imaginea să atingă bordura */
       background: linear-gradient(90deg, #a2112a, #ff7700, #ffdd00, #00aa00, #0055ff, #5e005e) border-box;
     }
 
@@ -582,16 +577,13 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      /* imaginea ocupă tot div-ul */
       display: block;
       border-radius: inherit;
-      /* colțurile imaginii coincid cu bordura */
+    
     }
 
-    /* Card text */
     .divdespre.despretext {
       padding: 20px;
-      /* doar cardul text are padding */
       color: black;
       background:
         linear-gradient(#ffffff, #ffffff) padding-box,
