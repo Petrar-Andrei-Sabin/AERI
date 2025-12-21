@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="author" content="Petrar Andrei-Sabin">
   <meta name="keywords" content="LGBT+, comunitate, diversitate, ONG">
-  <meta name="description" content="Pagina unui ONG">
+  <meta name="description" content="Un ONG care susține drepturile persoanelor LGBT+">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -457,6 +457,7 @@
     }
 
     .about-card {
+      height: 100%;
       width: 100%;
       display: flex;
       border-radius: 20px;
@@ -464,11 +465,7 @@
       background:
         linear-gradient(#fff, #fff) padding-box,
         linear-gradient(90deg, #a2112a, #ff7700, #ffdd00, #00aa00, #0055ff, #5e005e) border-box;
-      flex-direction: column;
     }
-
-
-
 
     .about-image img {
       width: 100%;
@@ -478,46 +475,21 @@
     }
 
     .about-text-inner {
-      flex-grow: 1;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      overflow-wrap: break-word;
-      white-space: normal;
-      overflow-y: auto;
-      max-height: 100%;
-
-
+      height: 100%;
+      width: 100%;
+      text-align: left;
     }
 
-.about-text {
-  max-height: 100vh;
-  overflow-y: auto;
-}
+    .about-text h2 {
+      font-size: clamp(1.4rem, 3vw, 2.4rem);
+      letter-spacing: 0.02em;
+    }
 
-.about-text-inner p,
-.about-text-inner h3 {
-  font-size: calc(1rem + 1vw + 1vh);
-}
-
-
-.about-text-inner {
-  overflow-y: auto;
-}
-
-.about-text-inner {
-  scrollbar-width: unset;
-  scrollbar-color: #000000 transparent;
-}
-
-.about-text-inner::-webkit-scrollbar {
-  width: 10px;
-}
-
-
-.about-text-inner::-webkit-scrollbar-track {
-  background: transparent;
-}
+    .about-text p {
+      font-size: clamp(0.9rem, 1.2vw, 1.15rem);
+    }
 
     .red-card {
       border: 5px solid #a2112a;
@@ -564,13 +536,15 @@
       font-weight: 400;
     }
 
-    .logo {
-      width: 50px;
-    }
+.logo {
+  width: 50px;
+}
 
-    .cent {
-      text-align: center;
-    }
+.cent {
+  text-align: center;
+}
+
+
   </style>
 </head>
 
@@ -603,6 +577,7 @@
         <div class="carousel-item active"> <img src="red.jpeg" class="d-block w-100 carousel-img"
             alt="Bec strălucitor roșu">
           <div class="carousel-caption">
+            <h2>Noi suntem Roși</h2>
             <h2>Noi suntem Roșii</h2>
             <p>Departamentul Sănătate și Bunăstare Fizică</p>
           </div>
@@ -610,27 +585,17 @@
         <div class="carousel-item"> <img src="orange.jpeg" class="d-block w-100 carousel-img"
             alt="Bec strălucitor portocliu">
           <div class="carousel-caption">
+            <h2>Noi suntem Portocali</h2>
             <h2>Noi suntem Portocalii</h2>
             <p>Departamentul Suport și Consiliere</p>
           </div>
         </div>
-        <div class="carousel-item"> <img src="yellow.jpeg" class="d-block w-100 carousel-img"
-            alt="Bec strălucitor galben">
-          <div class="carousel-caption">
-            <h2>Noi suntem Galbeni</h2>
-            <p>Departamentul Educație și Vizibilitate</p>
-          </div>
-        </div>
-        <div class="carousel-item"> <img src="green.jpeg" class="d-block w-100 carousel-img"
-            alt="Bec strălucitor verde">
-          <div class="carousel-caption">
-            <h2>Noi suntem Verzi</h2>
-            <p>Departamentul Comunitate și Mediu</p>
-          </div>
-        </div>
+
+
         <div class="carousel-item"> <img src="blue.jpeg" class="d-block w-100 carousel-img"
             alt="Bec strălucitor albastru">
           <div class="carousel-caption">
+            <h2>Noi suntem Albaștri</h2>
             <h2>Noi suntem Albaștrii</h2>
             <p>Departamentul Advocacy și Politici Publice</p>
           </div>
@@ -657,36 +622,42 @@
 
   <section class="about-section">
     <div class="container-fluid">
-      <div class="row g-4">
+      <div class="row">
 
-        <div class="col-12 col-md-6 d-flex">
+        <div class="col-12 col-md-6">
           <div class="about-card about-image">
             <img src="friendship.jpg" alt="O stea din mâini">
           </div>
         </div>
 
-        <div class="col-12 col-md-6 d-flex">
+        <div class="col-12 col-md-6">
           <div class="about-card about-text">
             <div class="about-text-inner p-5">
               <h3>AERI</h3>
-              <p>Este organizația non-guvernamentală dedicată promovării și protejării drepturilor
-                persoanelorLGBT+,acționând ca un spațiu sigur, incluziv și solidar pentru toți cei care se confruntă
-                cudiscriminare, marginalizare sau lipsă de reprezentare. Misiunea AERI este de a construi o societate
-                încare diversitatea orientărilor sexuale și identităților de gen este respectată, iar fiecare persoană
-                sepoatebucura de demnitate, libertate și egalitate în fața legii și a comunității.</p>
-              <p>Organizația desfășoară programe educaționale, campanii de conștientizare și activități de
-                advocacymenite să combată stereotipurile, să promoveze dialogul și să încurajeze schimbările
-                legislativenecesare pentru protejarea drepturilor omului. Prin colaborări cu instituții publice,
-                organizațiiinternaționale și comunitatea locală, AERI contribuie la dezvoltarea unor politici incluzive
-                și lacrearea unui climat social în care vocile persoanelor LGBT+ sunt auzite și respectate.</p>
-              <p>Pe lângă activitatea publică, AERI oferă sprijin direct persoanelor vulnerabile prin
-                consiliere,îndrumare și programe de suport emoțional și social. Fie că este vorba despre tineri care își
-                cautăidentitatea, persoane care se confruntă cu discriminare sau familii care au nevoie de resurse
-                pentru aînțelege mai bine diversitatea, organizația se implică activ pentru a oferi ajutor competent și
-                empatic</p>
               <p>
-                Prin toate inițiativele sale, AERI își propune să creeze o Românie mai deschisă, mai empatică și
-                maiechitabilă, în care fiecare individ să poată trăi autentic și fără teama.
+                Este organizația non-guvernamentală dedicată promovării și protejării drepturilor persoanelor
+                LGBT+,acționând ca un spațiu sigur, incluziv și solidar pentru toți cei care se confruntă cu
+                discriminare, marginalizare sau lipsă de reprezentare. Misiunea AERI este de a construi o societate în
+                care diversitatea orientărilor sexuale și identităților de gen este respectată, iar fiecare persoană se
+                poate
+                bucura de demnitate, libertate și egalitate în fața legii și a comunității.
+              </p>
+              <p>
+                Organizația desfășoară programe educaționale, campanii de conștientizare și activități de advocacy
+                menite să combată stereotipurile, să promoveze dialogul și să încurajeze schimbările legislative
+                necesare pentru protejarea drepturilor omului. Prin colaborări cu instituții publice, organizații
+                internaționale și comunitatea locală, AERI contribuie la dezvoltarea unor politici incluzive și la
+                crearea unui climat social în care vocile persoanelor LGBT+ sunt auzite și respectate.
+              </p>
+              <p>
+                Pe lângă activitatea publică, AERI oferă sprijin direct persoanelor vulnerabile prin consiliere,
+                îndrumare și programe de suport emoțional și social. Fie că este vorba despre tineri care își caută
+                identitatea, persoane care se confruntă cu discriminare sau familii care au nevoie de resurse pentru a
+                înțelege mai bine diversitatea, organizația se implică activ pentru a oferi ajutor competent și empatic.
+              </p>
+              <p>
+              Prin toate inițiativele sale, AERI își propune să creeze o Românie mai deschisă, mai empatică și mai
+              echitabilă, în care fiecare individ să poată trăi autentic și fără teama.
               </p>
             </div>
           </div>
@@ -695,7 +666,6 @@
       </div>
     </div>
   </section>
-
 
 
   <h2 class="h2pt" id="membri">Membri</h2>
