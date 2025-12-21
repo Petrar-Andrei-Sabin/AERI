@@ -457,7 +457,6 @@
     }
 
     .about-card {
-      height: 100%;
       width: 100%;
       display: flex;
       border-radius: 20px;
@@ -465,7 +464,11 @@
       background:
         linear-gradient(#fff, #fff) padding-box,
         linear-gradient(90deg, #a2112a, #ff7700, #ffdd00, #00aa00, #0055ff, #5e005e) border-box;
+      flex-direction: column;
     }
+
+
+
 
     .about-image img {
       width: 100%;
@@ -475,21 +478,46 @@
     }
 
     .about-text-inner {
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
-      height: 100%;
-      width: 100%;
-      text-align: left;
+      justify-content: flex-start;
+      overflow-wrap: break-word;
+      white-space: normal;
+      overflow-y: auto;
+      max-height: 100%;
+
+
     }
 
-    .about-text h2 {
-      font-size: clamp(1.4rem, 3vw, 2.4rem);
-      letter-spacing: 0.02em;
-    }
+.about-text {
+  max-height: 100vh;
+  overflow-y: auto;
+}
 
-    .about-text p {
-      font-size: clamp(0.9rem, 1.2vw, 1.15rem);
-    }
+.about-text-inner p,
+.about-text-inner h3 {
+  font-size: calc(1rem + 1vw + 1vh);
+}
+
+
+.about-text-inner {
+  overflow-y: auto;
+}
+
+.about-text-inner {
+  scrollbar-width: unset;
+  scrollbar-color: #000000 transparent;
+}
+
+.about-text-inner::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+.about-text-inner::-webkit-scrollbar-track {
+  background: transparent;
+}
 
     .red-card {
       border: 5px solid #a2112a;
@@ -536,15 +564,13 @@
       font-weight: 400;
     }
 
-.logo {
-  width: 50px;
-}
+    .logo {
+      width: 50px;
+    }
 
-.cent {
-  text-align: center;
-}
-
-
+    .cent {
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -631,42 +657,36 @@
 
   <section class="about-section">
     <div class="container-fluid">
-      <div class="row">
+      <div class="row g-4">
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 d-flex">
           <div class="about-card about-image">
             <img src="friendship.jpg" alt="O stea din mâini">
           </div>
         </div>
 
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 d-flex">
           <div class="about-card about-text">
             <div class="about-text-inner p-5">
               <h3>AERI</h3>
+              <p>Este organizația non-guvernamentală dedicată promovării și protejării drepturilor
+                persoanelorLGBT+,acționând ca un spațiu sigur, incluziv și solidar pentru toți cei care se confruntă
+                cudiscriminare, marginalizare sau lipsă de reprezentare. Misiunea AERI este de a construi o societate
+                încare diversitatea orientărilor sexuale și identităților de gen este respectată, iar fiecare persoană
+                sepoatebucura de demnitate, libertate și egalitate în fața legii și a comunității.</p>
+              <p>Organizația desfășoară programe educaționale, campanii de conștientizare și activități de
+                advocacymenite să combată stereotipurile, să promoveze dialogul și să încurajeze schimbările
+                legislativenecesare pentru protejarea drepturilor omului. Prin colaborări cu instituții publice,
+                organizațiiinternaționale și comunitatea locală, AERI contribuie la dezvoltarea unor politici incluzive
+                și lacrearea unui climat social în care vocile persoanelor LGBT+ sunt auzite și respectate.</p>
+              <p>Pe lângă activitatea publică, AERI oferă sprijin direct persoanelor vulnerabile prin
+                consiliere,îndrumare și programe de suport emoțional și social. Fie că este vorba despre tineri care își
+                cautăidentitatea, persoane care se confruntă cu discriminare sau familii care au nevoie de resurse
+                pentru aînțelege mai bine diversitatea, organizația se implică activ pentru a oferi ajutor competent și
+                empatic</p>
               <p>
-                Este organizația non-guvernamentală dedicată promovării și protejării drepturilor persoanelor
-                LGBT+,acționând ca un spațiu sigur, incluziv și solidar pentru toți cei care se confruntă cu
-                discriminare, marginalizare sau lipsă de reprezentare. Misiunea AERI este de a construi o societate în
-                care diversitatea orientărilor sexuale și identităților de gen este respectată, iar fiecare persoană se
-                poate
-                bucura de demnitate, libertate și egalitate în fața legii și a comunității.
-              </p>
-              <p>
-                Organizația desfășoară programe educaționale, campanii de conștientizare și activități de advocacy
-                menite să combată stereotipurile, să promoveze dialogul și să încurajeze schimbările legislative
-                necesare pentru protejarea drepturilor omului. Prin colaborări cu instituții publice, organizații
-                internaționale și comunitatea locală, AERI contribuie la dezvoltarea unor politici incluzive și la
-                crearea unui climat social în care vocile persoanelor LGBT+ sunt auzite și respectate.
-              </p>
-              <p>
-                Pe lângă activitatea publică, AERI oferă sprijin direct persoanelor vulnerabile prin consiliere,
-                îndrumare și programe de suport emoțional și social. Fie că este vorba despre tineri care își caută
-                identitatea, persoane care se confruntă cu discriminare sau familii care au nevoie de resurse pentru a
-                înțelege mai bine diversitatea, organizația se implică activ pentru a oferi ajutor competent și empatic.
-              <p>
-              </p>
-              Prin toate inițiativele sale, AERI își propune să creeze o Românie mai deschisă, mai empatică și mai
-              echitabilă, în care fiecare individ să poată trăi autentic și fără teama.
+                Prin toate inițiativele sale, AERI își propune să creeze o Românie mai deschisă, mai empatică și
+                maiechitabilă, în care fiecare individ să poată trăi autentic și fără teama.
               </p>
             </div>
           </div>
@@ -675,6 +695,7 @@
       </div>
     </div>
   </section>
+
 
 
   <h2 class="h2pt" id="membri">Membri</h2>
